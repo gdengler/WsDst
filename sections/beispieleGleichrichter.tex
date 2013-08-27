@@ -25,12 +25,14 @@ Ventil/Diode und Trafo werden als verlustlos betrachtet.
 
 \begin{multicols}{2}
 \subsubsection{Dimmer (Triac, W1C)}
-Ventile verlustlos, Steuerwinkel = $90^\circ$ \newline
-\adjustbox{scale=1}{\input{tikz/gleichrichter_dimmer}}
+Ventile verlustlos, Steuerwinkel = $90^\circ  (\alpha = 0.25)$ \newline
+\adjustbox{scale=1}{\input{tikz/gleichrichter_dimmer}} $\alpha = \frac{t_0}{T}$
 
 \renewcommand{\arraystretch}{1.5}
  \begin{tabular}{ll}
  	Effektivspannung $U_A$		& $ = U_N \cdot \sqrt{\frac{1}{2}}$ \\
+ 								& $ = U_N \cdot \sqrt{1-2 \cdot \alpha +
+ 	\frac{1}{2\pi} \cdot \sin{4 \pi \alpha}}$\\
  	Effektivstrom $I_S$			& $ = \frac{U_A}{R}$ \\
  	Wirkleistung $P_R$			& $ = \frac{U_A^2}{R} $ \\
  	Leistungsaufname $S_N$		& $ = U_N \cdot I_S $ (Winkel: $45^\circ$) \\
